@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "smoker-or-not",
     "public": "build",
     "ignore": [
       "firebase.json",

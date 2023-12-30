@@ -15,8 +15,7 @@ const MainPage = () => {
         <div className={style.container}>
             <div className={style.headerCard}>
                 <h1 className={style.title}>Smoker or Not</h1>
-                <h2 className={style.subtitle}>A Data Science Exercise</h2>
-                <h3 className={style.info}>by John Vincent Cuntapay, John Angelo De Veyra, John Louie Sude, & John Thaddeus Ventura </h3>
+                <h2 className={style.subtitle}>An adapted data science exercise</h2>
                 <p className={style.semVer}>v{packageJson.version}</p>
             </div>
             <div className={style.buttonContainer}>

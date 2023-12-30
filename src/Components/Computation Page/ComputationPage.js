@@ -71,7 +71,7 @@ const ComputationPage = () => {
                 <div className={style.inputCard}>
                     <div className={style.inputContainer}>
                         <div className={style.inputHeaderContainer}>
-                            <h5 className={style.inputHeader}>Age</h5>
+                            <label className={style.inputHeader}>Age</label>
                         </div>
                         <input placeholder="Age" className={style.input} 
                             onChange={(e) => setAge(e.target.value)}/>
@@ -79,14 +79,14 @@ const ComputationPage = () => {
                     <div className={style.inputContainer}>
                         <div className={style.inputHeaderContainer}>
 
-                            <h5 className={style.inputHeader}>BMI</h5>
+                            <label className={style.inputHeader}>BMI</label>
                         </div>
                         <input placeholder="BMI" className={style.input} 
                             onChange={(e) => setBmi(e.target.value)}/>
                     </div>
                     <div className={style.inputContainer}>
                         <div className={style.inputHeaderContainer}>
-                            <h5 className={style.inputHeader}>No. of Children</h5>
+                            <label className={style.inputHeader}>No. of Children</label>
 
                         </div>    
                         <input placeholder="No. of Children" className={style.input} 
@@ -97,37 +97,36 @@ const ComputationPage = () => {
                             <input type='radio' className={style.radioButton} 
                                 checked={isMale}
                                 onChange={(e) => setIsMale(true)}/>
-                            <h6 className={style.inputHeaderRadio}>Male</h6>
+                            <label className={style.inputHeaderRadio}>Male</label>
 
 
                         </div>
                         <div className={style.radioButtonElement}>
                             <input type='radio' className={style.radioButton} checked={!isMale} 
                                 onChange={(e) => setIsMale(false)}/>
-                            <h6 className={style.inputHeaderRadio}>Female</h6>
+                            <label className={style.inputHeaderRadio}>Female</label>
 
 
                         </div>
                     </div>
                 </div>
-                <div className={style.resultCard}>
-                    <div className={style.headerContainer}>
+                <div className={style.resultColumn}>
+                    <div className={style.resultCard}>
+                        <div className={style.headerContainer}>
                         <h2 className={style.header}>Smoker Probability</h2>
                         
-
+                        </div>
+                        <div className={style.probContainer}>
+                            <h4 className={style.probability}>{probability}%</h4>
+                        </div>
                     </div>
-                    <div className={style.probContainer}>
-                        <h4 className={style.probability}>{probability}%</h4>
-                    </div>
+                    <button className={style.button}
+                        onClick={() => handleClick()}
+                        disabled={!canCalculate}
+                    >
+                        Calculate
+                    </button>
                 </div>
-            </div>
-            <div className={style.buttonContainer}>
-                <button className={style.button}
-                    onClick={() => handleClick()}
-                    disabled={!canCalculate}
-                >
-                    Calculate
-                </button>
             </div>
         </div>
     );
